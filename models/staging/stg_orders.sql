@@ -14,7 +14,7 @@ with pedidos as (
         , ship_via as id_transportador
         , ship_address as endereco_entrega
         , required_date as data_prevista
-    from {{ source('northwind_dados_brutos', 'orders' )}}
+    from {{ source('northiwind_dados_brutos_stitch', 'orders' )}}
 ),
     pedido_item as (
         select
@@ -22,7 +22,7 @@ with pedidos as (
         sum(quantity) as quantidade_total,
         sum(unit_price*(1-discount) * quantity) as valor_faturado,
         count(*) as quantidade_itens
-        from {{ source('northwind_dados_brutos', 'order_details' )}}
+        from {{ source('northiwind_dados_brutos_stitch', 'order_details' )}}
         group by order_id
  
     ),
