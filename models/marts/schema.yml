@@ -9,7 +9,6 @@ models:
             tests: 
                 - unique
                 - not_null 
-
     - name: dim_clientes
       description: "Esta é a tabela de dimensão Cliente da Northwind"
       columns: 
@@ -54,3 +53,4 @@ models:
             tests: 
                 - unique
                 - not_null
+    
