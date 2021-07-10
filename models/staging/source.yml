@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+
+  - name: northwind_dados_brutos
+    description: Essa é a fonte de dados do BigQuery, criada através do Kondado
+
+    tables:
+      - name: categorias
+        #description: Essa é a tabela de produtos do ERP.
