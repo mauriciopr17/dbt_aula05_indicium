@@ -1,4 +1,4 @@
-WITH SGT_COLABORADOR AS ( SELECT *
+WITH STG_COLABORADOR AS ( SELECT *
                             FROM {{ ref('stg_colaborador') }} )
 
-SELECT * FROM SGT_COLABORADOR
+SELECT * FROM STG_COLABORADOR

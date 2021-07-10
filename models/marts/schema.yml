@@ -1,11 +1,47 @@
 version: 2
 
 models: 
+    - name: dim_categorias
+      description: "Esta é a tabela de dimensão de Categorias da Northwind"
+      columns: 
+          - name: sk_categoria
+            description: "A chave surrogada da dimensão categorias"
+            tests: 
+                - unique
+                - not_null 
+
     - name: dim_clientes
       description: "Esta é a tabela de dimensão Cliente da Northwind"
       columns: 
           - name: sk_cliente
             description: "A chave surrogada da dimensão cliente"
+            tests: 
+                - unique
+                - not_null 
+
+    - name: dim_colaborador
+      description: "Esta é a tabela de dimensão de Colaboradores da Northwind"
+      columns: 
+          - name: sk_colaborador
+            description: "A chave surrogada da dimensão colaborador"
+            tests: 
+                - unique
+                - not_null 
+
+    - name: dim_produtos
+      description: "Esta é a tabela de dimensão de Produtos da Northwind"
+      columns: 
+          - name: sk_produto
+            description: "A chave surrogada da dimensão de produtos"
+            tests: 
+                - unique
+                - not_null 
+    
+    - name: dim_transportadora
+      description: "Esta é a tabela de dimensão de Transportadoras da Northwind"
+      columns: 
+          - name: sk_transportadora
+            description: "A chave surrogada da dimensão de Transportadora"
             tests: 
                 - unique
                 - not_null 

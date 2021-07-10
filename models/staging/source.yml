@@ -6,5 +6,25 @@ sources:
     description: Essa é a fonte de dados do BigQuery, criada através do Kondado
 
     tables:
-      - name: categorias
-        #description: Essa é a tabela de produtos do ERP.
+      - name: categories
+      description: Essa é a tabela de Categorias do ERP.
+
+    tables:
+      - name: customers
+      description: Essa é a tabela de Clientes do ERP.
+
+    tables:
+      - name: employees
+      description: Essa é a tabela de Colaborador do ERP.
+  
+    tables:
+      - name: orders
+      description: Essa é a tabela de Pedidos do ERP.
+
+    tables:
+      - name: products
+      description: Essa é a tabela de Produtos do ERP.
+
+    tables:
+      - name: shippers
+      description: Essa é a tabela de Transportadores do ERP.
