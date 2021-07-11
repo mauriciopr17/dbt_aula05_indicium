@@ -1,4 +1,5 @@
-with pedidos as (
+
+/*with pedidos as (
     select
         order_id as id_pedido
         , employee_id as id_funcionario
@@ -52,3 +53,4 @@ with pedidos as (
     )
  
 select * from dados_juntados
+*/
