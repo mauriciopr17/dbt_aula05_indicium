@@ -1,5 +1,5 @@
 
-/*with pedidos as (
+with pedidos as (
     select
         order_id as id_pedido
         , employee_id as id_funcionario
@@ -16,7 +16,7 @@
         , ship_address as endereco_entrega
         , required_date as data_prevista
     from {{ source('northiwind_dados_brutos_stitch', 'orders' )}}
-),
+/*),
     pedido_item as (
         select
         order_id as id_pedido,
@@ -54,3 +54,4 @@
  
 select * from dados_juntados
 */
+select * from pedido
