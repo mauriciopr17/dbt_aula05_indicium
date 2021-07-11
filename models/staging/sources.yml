@@ -1,8 +1,8 @@
 version: 2
 
 sources:
- - name: northiwind_dados_brutos_stitch
-   description: Essa é a fonte de dados do BigQuery, criada através do Stitch.
-   tables:
-     - name: categories
-       description: Essa é a tabela de Categorias do ERP.
+  - name: northiwind_dados_brutos_stitch
+    description: Essa é a fonte de dados do BigQuery, criada através do Stitch.
+    tables:
+      - name: categories
+        description: Essa é a tabela de Categorias do ERP.
