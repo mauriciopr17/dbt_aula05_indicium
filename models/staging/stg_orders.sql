@@ -51,5 +51,4 @@ with pedidos as (
         left join pedido_item on pedidos.id_pedido = pedido_item.id_pedido
  
     )
- 
 select * from dados_juntados
