@@ -16,7 +16,7 @@ WITH PRODUTOS AS (
 					  		  ELSE
 					  		    'NÃO'
 					  		 END PRODUTO_DISCONTINUADO
-					    FROM PRODUCTS )
+					    FROM {{ source('northiwind_dados_brutos_stitch', 'products' )}} ) )
 ,FORNECEDORES AS (    SELECT ROW_NUMBER() OVER ( ORDER BY SUPPLIER_ID )  AS SK_FORNECEDORES --**-- CHAVE SURROGATE
 							,SUPPLIER_ID        AS ID_FORNECEDOR
 							,COMPANY_NAME	    AS NOME_EMPRESA
@@ -29,7 +29,7 @@ WITH PRODUTOS AS (
 							,PHONE	    		AS TELEFONE
 							,FAX			    AS TELEFONE_FAX
 							,HOMEPAGE	        AS WEB_SITE					
-	                     FROM SUPPLIERS )
+	                     FROM {{ source('northiwind_dados_brutos_stitch', 'suppliers' )}} )
 ,PRODUTOS_DETALHES AS (   SELECT P.SK_PRODUTO --**-- CHAVE SURROGATE
 						  		,P.ID_PRODUTO
 						  		,F.SK_FORNECEDORES --**-- CHAVE SURROGATE

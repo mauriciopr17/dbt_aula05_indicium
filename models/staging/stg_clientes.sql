@@ -10,5 +10,5 @@ WITH CLIENTES AS (
                          ,COUNTRY       AS PAIS        
                          ,POSTAL_CODE   AS CEP     
                          ,ADDRESS       AS ENDERECO 
-                    FROM CUSTOMERS )
+                    FROM {{ source('northiwind_dados_brutos_stitch', 'customers')}} )
 SELECT * FROM CLIENTES
