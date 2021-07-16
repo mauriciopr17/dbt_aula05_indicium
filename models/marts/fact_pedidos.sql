@@ -6,6 +6,10 @@ WITH PEDIDOS AS ( SELECT *
                     FROM {{ ref('dim_colaborador') }} ) 
 ,TRANSPORTADORA AS ( SELECT *
                        FROM {{ ref('dim_transportadora') }} )
+,PRODUTO AS ( SELECT *
+                       FROM {{ ref('dim_produtos') }} )
+,FORNECEDOR AS ( SELECT *
+                       FROM {{ ref('dim_fornecedores') }} )
 
 ,PEDIDO_DETALHES AS (
                         SELECT ID_PEDIDO
@@ -31,6 +35,9 @@ WITH PEDIDOS AS ( SELECT *
                          FROM PEDIDOS             PED
                          LEFT JOIN CLIENTES       CLI ON PED.ID_CLIENTE        = CLI.ID_CLIENTE
                          LEFT JOIN COLABORADOR    COL ON COL.ID_COLABORADOR    = PED.ID_FUNCIONARIO
-                         LEFT JOIN TRANSPORTADORA TRA ON TRA.ID_TRANSPORTADORA = PED.ID_TRANSPORTADOR )
+                         LEFT JOIN TRANSPORTADORA TRA ON TRA.ID_TRANSPORTADORA = PED.ID_TRANSPORTADOR
+                         --LEFT JOIN PRODUTO        PRO ON PRO.ID_PROTUDO        = PED.ID_PRODUTO
+                         --LEFT JOIN FORNECEDOR     TRA ON TRA.ID_FORNECEDOR     = PED.ID_TRANSPORTADOR
+                          )
 
 SELECT * FROM PEDIDO_DETALHES

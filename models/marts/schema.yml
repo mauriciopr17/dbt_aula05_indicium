@@ -26,7 +26,14 @@ models:
             tests: 
                 - unique
                 - not_null 
-
+    - name: dim_fornecedores
+      description: "Esta é a tabela de dimensão de Fornecedores da Northwind"
+      columns: 
+          - name: sk_fornecedor
+            description: "A chave surrogada da dimensão fornecedor"
+            tests: 
+                - unique
+                - not_null 
     - name: dim_produtos
       description: "Esta é a tabela de dimensão de Produtos da Northwind"
       columns: 
@@ -47,6 +54,15 @@ models:
 
     - name: fact_pedidos
       description: "Esta é a tabela de fatos Pedidos da Northwind. Granularidade é o Pedido"
+      columns: 
+          - name: id_pedido
+            description: "PK da Tabela"
+            tests: 
+                - unique
+                - not_null
+    
+    - name: fact_pedido_itens
+      description: "Esta é a tabela de fatos Pedidos da Northwind. Granularidade é o Iten Pedido"
       columns: 
           - name: id_pedido
             description: "PK da Tabela"
