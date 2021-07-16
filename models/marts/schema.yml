@@ -57,16 +57,4 @@ models:
       columns: 
           - name: id_pedido
             description: "PK da Tabela"
-            tests: 
-                - unique
-                - not_null
-    
-    - name: fact_pedido_itens
-      description: "Esta é a tabela de fatos Pedidos da Northwind. Granularidade é o Iten Pedido"
-      columns: 
-          - name: id_pedido
-            description: "PK da Tabela"
-            tests: 
-                - unique
-                - not_null
-    
+        
