@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+ - name: northiwind_dados_brutos_stitch
+   description: Essa é a fonte de dados do BigQuery, criada através do Stitch.
+   tables:
+   - name: categories
+     description: Essa é a tabela de Categorias do ERP.
+   - name: customers
+     description: Essa é a tabela de Clientes do ERP.
+   - name: employees
+     description: Essa é a tabela de Colaborador do ERP.  
+   - name: orders
+     description: Essa é a tabela de Pedidos do ERP.
+   - name: order_details
+     description: Essa é a tabela de Itens de Pedidos do ERP.
+   - name: products
+     description: Essa é a tabela de Produtos do ERP.
+   - name: suppliers
+     description: Essa é a tabela de Fornecedores do ERP.
+   - name: shippers
+     description: Essa é a tabela de Transportadores do ERP.
